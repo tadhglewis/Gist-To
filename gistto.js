@@ -1,4 +1,4 @@
-const gistUrl = 'https://gist.githubusercontent.com/tadhglewis/a2abf9cac2dcbe1e53db67ada6e50bbf/raw';
+const gistUrl = 'https://gist.githubusercontent.com/tadhglewis/b90c2f422081a7870f8abae69223d105/raw';
 
 
 
@@ -6,7 +6,7 @@ fetch(gistUrl + window.location.pathname)
 .then((response) => {
     response.text().then((text) => {
         var redirectUrl = '';
-        
+
         if (response.status == 200) {
             redirectUrl = text;
         }
