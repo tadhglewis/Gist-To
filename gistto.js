@@ -1,10 +1,10 @@
-const url = document.querySelector('[data-gist-to="url"]').getAttribute('data-gist-to-content').toString();
-const prefix = document.querySelector('[data-gist-to="prefix"]').getAttribute('data-gist-to-content').toString();
+const url = document.querySelector('[data-gist-to="url"]').getAttribute('data-gist-to-content');
+const prefix = document.querySelector('[data-gist-to="prefix"]').getAttribute('data-gist-to-content');
 
 var gistToUrl = '';
 
 if (prefix) {
-    gistToUrl = url + window.location.pathname.slice([prefix].length);
+    gistToUrl = url + window.location.pathname.slice(prefix.length);
 } else {
     gistToUrl = url;
 }
