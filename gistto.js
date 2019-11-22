@@ -1,5 +1,5 @@
 const gistUrl = 'https://gist.githubusercontent.com/tadhglewis/b90c2f422081a7870f8abae69223d105/raw';
-const urlPrefix = ''
+const urlPrefix = '/Gist-To'
 
 
 fetch(gistUrl + window.location.pathname.slice(urlPrefix.length))
