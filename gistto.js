@@ -4,7 +4,7 @@ const prefix = document.querySelector('[data-gist-to="prefix"]').getAttribute('d
 var gistToUrl = '';
 
 if (prefix) {
-    gistToUrl = url + window.location.pathname.slice(urlPrefix.length);
+    gistToUrl = url + window.location.pathname.slice([prefix].length);
 } else {
     gistToUrl = url;
 }
@@ -27,7 +27,7 @@ fetch(gistToUrl)
             for (var i = 0; i++; i < dataGistTo.length) {
                 dataGistTo[i].remove();
             }
-            
+
             return;
         }
         
