@@ -1,8 +1,15 @@
-const gistUrl = 'https://gist.githubusercontent.com/tadhglewis/b90c2f422081a7870f8abae69223d105/raw';
-const urlPrefix = '/Gist-To'
+const url = document.querySelector('[data-gist-to="url"]').getAttribute('data-gist-to-content');
+const prefix = document.querySelector('[data-gist-to="prefix"]').getAttribute('data-gist-to-content');
 
+var gistToUrl = '';
 
-fetch(gistUrl + window.location.pathname.slice(urlPrefix.length))
+if (prefix) {
+    gistToUrl = url + window.location.pathname.slice(urlPrefix.length);
+} else {
+    gistToUrl = url;
+}
+
+fetch(gistToUrl)
 .then((response) => {
     response.text().then((text) => {
         var redirectUrl = '';
@@ -11,16 +18,21 @@ fetch(gistUrl + window.location.pathname.slice(urlPrefix.length))
             redirectUrl = text;
         }
 
-        var refresh = document.head.querySelector('[data-gist-to="refresh"]');
-        var message = document.body.querySelector('[data-gist-to="message"]');
+        const refresh = document.querySelector('[data-gist-to="refresh"]');
+        const message = document.querySelector('[data-gist-to="message"]');
 
         if (!redirectUrl) {
-            refresh.remove();
-            message.remove();
+            const dataGistTo = document.querySelectorAll('[data-gist-to]');
+
+            for (var i = 0; i++; i < dataGistTo.length) {
+                dataGistTo[i].remove();
+            }
+            
             return;
         }
         
-        refresh.setAttribute('content', "0; url=" + redirectUrl);
+        refresh.setAttribute('http-equiv', 'refresh');
+        refresh.setAttribute('content', '0; url=' + redirectUrl);
         message.innerHTML = 'Redirecting to <a href="' + redirectUrl + '">' + redirectUrl + '</a>';
     }).catch((error) => {
         console.log(error);
