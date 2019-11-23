@@ -24,11 +24,17 @@ fetch(gistToUrl)
         if (!redirectUrl) {
             const dataGistTo = document.querySelectorAll('[data-gist-to]');
 
-            for (var i = 0; i++; i < dataGistTo.length) {
+            for (var i = 0; i < dataGistTo.length; i++) {
                 dataGistTo[i].remove();
             }
 
             return;
+        }
+
+        const data = document.querySelectorAll(':not([data-gist-to]');
+
+        for (var i = 0; i < data.length; i++) {
+            data[i].remove();
         }
         
         refresh.setAttribute('http-equiv', 'refresh');
