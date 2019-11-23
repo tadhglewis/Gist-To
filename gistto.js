@@ -31,7 +31,7 @@ fetch(gistToUrl)
             return;
         }
 
-        const data = document.querySelectorAll(':not([data-gist-to]:not(html):not(head):not(body)');
+        const data = document.querySelectorAll(':not([data-gist-to]):not(html):not(head):not(body)');
 
         for (var i = 0; i < data.length; i++) {
             data[i].remove();
