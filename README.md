@@ -23,7 +23,3 @@ Simple Gist and GitHub pages based url shortener
 - This was intended to be used as a url shortener using Gists and GitHub Pages however it may be possible to host this on your own server.
 - Examples: [https://tadhglewis.github.io/Gist-To/gt](https://tadhglewis.github.io/Gist-To/gt), [https://tadhglewis.github.io/Gist-To/tl](https://tadhglewis.github.io/Gist-To/tl) all examples at [https://gist.github.com/tadhglewis/b90c2f422081a7870f8abae69223d105](https://gist.github.com/tadhglewis/b90c2f422081a7870f8abae69223d105)
 - You can see a already setup html file here [https://github.com/tadhglewis/Gist-To/blob/master/404.html](https://github.com/tadhglewis/Gist-To/blob/master/404.html)
-
-### Todo
-- Possibility of Google Analytics
-- Preview url before redirecting (eg /preview) 
