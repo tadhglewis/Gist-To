@@ -1,3 +1,5 @@
+'use strict';
+
 (function() {
     const url = document.querySelector('[data-gist-to="url"]').getAttribute('data-gist-to-content');
     const prefix = document.querySelector('[data-gist-to="prefix"]').getAttribute('data-gist-to-content');
