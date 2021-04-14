@@ -9,6 +9,8 @@ Simple Gist and GitHub pages based url shortener
 - As this is a client-side JavaScript based url shortener the browser must have JavaScript enabled
 - This project was created as a small side project and may not be production ready. Feel free to contribute and improve this project, everyone is welcome.
 
+You should probably use https://github.com/tadhglewis/cloudflare-pages-url-shortener
+
 ### Setup
 - Add `<meta data-gist-to="url" data-gist-to-content="YOUR_URL">` in the head tag
 - Add `<meta data-gist-to="prefix" data-gist-to-content="YOUR_PREFIX">` in the head tag (optional)
